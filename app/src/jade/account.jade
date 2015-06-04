@@ -1,0 +1,77 @@
+include utiles/head
+body
+	.container
+		include utiles/first-header
+		.row
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12.history-head
+				h1
+					|HI MICHEL,<br />
+					|THIS IS YOUR ORDER HISTORY
+				a(href="user-data.html") EDIT YOUR ACCOUNT
+		.row.history-border-bottom
+			.col-xs-12.col-sm-7.col-md-7.col-lg-7
+				ul.table-history-order
+					li
+						p ORDER NO
+					li
+						p ORDER DATE
+					li
+						P PRODUCTS
+			.col-xs-12.col-sm-5.col-md-5.col-lg-5
+				ul.table-history-status
+					li
+						p STATUS
+					li
+						p SHIP DATE
+					li
+						p TOTAL ABOUNT
+		.row.history-border-bottom
+			.col-xs-12.col-sm-7.col-md-7.col-lg-7.history-table-margin
+				.table-history-first
+					p #28364
+					p 21/05/2014
+					.product-data
+						div
+							a(href="#")
+								img.wear-img-history(src="http://goodncrazy.com/wp-content/uploads/2013/01/miz-mooz-red-boot-buttons.jpg")
+							p.wear-name-history
+								|FLORAL PLIMSOLL<br />
+								|<span>ref. 2514/302</span>
+						div
+							a(href="#")
+								img.wear-img-history(src="http://goodncrazy.com/wp-content/uploads/2013/01/miz-mooz-red-boot-buttons.jpg")
+							p.wear-name-history
+								|FLORAL PLIMSOLL<br />
+								|<span>ref. 2514/302</span>
+						div
+							a(href="#")
+								img.wear-img-history(src="http://goodncrazy.com/wp-content/uploads/2013/01/miz-mooz-red-boot-buttons.jpg")
+							p.wear-name-history
+								|FLORAL PLIMSOLL<br />
+								|<span>ref. 2514/302</span>
+			.col-xs-12.col-sm-5.col-md-5.col-lg-5
+				.table-history-second
+					p OPEN
+					p 22/05/2014
+					p <i class="fa fa-eur"></i>345.00
+		.row.history-border-bottom
+			.col-xs-12.col-sm-7.col-md-7.col-lg-7
+				.table-history-first
+					p #28364
+					p 21/05/2014
+					.product-data
+						a(href="#")
+							img(src="http://goodncrazy.com/wp-content/uploads/2013/01/miz-mooz-red-boot-buttons.jpg").wear-img-history
+							p.wear-name-history
+								|FLORAL PLIMSOLL<br />
+								|ref. 2514/302
+			.col-xs-12.col-sm-5.col-md-5.col-lg-5
+				.table-history-second
+					p OPEN
+					p 22/05/2014
+					p <i class="fa fa-eur"></i>345.00
+		.row
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12.history-show-me
+				a(href="#") SHOW ME MORE ITEMS
+		include utiles/footer
+

@@ -1,0 +1,60 @@
+include utiles/head
+body
+	.container
+		include utiles/first-header
+		.row
+			p.navigate <a href="index.html">HOME</a> / <a href="account.html">ACCOUNT</a> / EDIT YOUR ACCOUNT
+		.row
+			.col-sm-12.col-md-12.col-lg-12.page-head
+				h1 EDIT YOUR ACCOUNT
+		.row
+			.col-sm-12.col-md-12.col-lg-12
+				.theme
+					form
+						.two-inputs
+							.close-inputs
+								h5 	FIRST NAME
+								input(type="text")
+							.close-inputs
+								h5 LAST NAME
+								form
+									input(type="text")
+						.two-inputs
+							.company-name
+								h5 COMPANY-NAME <span>(optional)</span>
+								input(type="text")
+							.nip
+								h5 NIP <span>(optional)</span>
+								input(type="text")
+						.addresses
+							h5 ADDRESS
+							input(type="text")
+						.two-inputs
+							.close-inputs
+								h5 CITY
+								input(type="text")
+							.close-inputs
+								h5 ZIP CODE
+								input(type="text")
+						.account-country
+							h5 COUNTRY
+							select.country-select
+								option Australia
+								option Brazzil
+								option Poland
+								option Russia
+								option Sweden
+						.two-inputs
+							.close-inputs
+								h5 PHONE NUMBER
+								input
+							.close-inputs
+								h5 E-MAIL
+								input(type="text")
+						.use-address
+							input(type="checkbox")
+							<span>Use this address for Billing</span>
+		.row
+			.col-sm-12.col-md-12.col-lg-12.redaction-button-save
+				button(type="submit") SAVE
+		include utiles/footer
