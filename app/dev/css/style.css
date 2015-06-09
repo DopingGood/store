@@ -123,9 +123,6 @@ button:focus {
   padding: 1.1rem 1rem 0 0;
   float: right;
 }
-.modal-backdrop {
-  height: 60rem !important;
-}
 .modal-content:before {
   content: "SH";
   display: block;
@@ -1959,6 +1956,6 @@ p.padding-right-2.5 {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 52rem;
-    margin-top: 13rem;
+    margin: 13rem auto;
   }
 }
