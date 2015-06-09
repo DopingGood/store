@@ -20,12 +20,12 @@ $(document).ready(function(){
 	$(".seeker").click(function(){
 		if ($(".seeker").hasClass("hovered-seeker") == false) {
 				$(".seeker").addClass("hovered-seeker");
-				$(".seeker-text").show("slide", {direction: "right"}, 120);
+				$(".seeker-text").show("slide", {direction: "right"}, 800);
 				$(".seeker-text").focus();
 		}
 		else {
 			$(".seeker").removeClass("hovered-seeker");
-			$(".seeker-text").hide("slide", {direction: "right"}, 120);
+			$(".seeker-text").hide("slide", {direction: "right"}, 500);
 		};
 	});
 	$('.selectpicker').selectpicker({

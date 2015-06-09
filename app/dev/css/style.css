@@ -123,6 +123,9 @@ button:focus {
   padding: 1.1rem 1rem 0 0;
   float: right;
 }
+.modal-backdrop {
+  height: 60rem !important;
+}
 .modal-content:before {
   content: "SH";
   display: block;
@@ -132,7 +135,7 @@ button:focus {
   padding: 1.7rem;
   border: 1px solid #fff;
   top: -11rem;
-  left: 20rem;
+  left: 21.5rem;
 }
 .modal-body {
   padding: 3rem 5rem;
@@ -298,6 +301,9 @@ button:focus {
   padding: 1rem 1rem 0 0;
   float: right;
 }
+.seek-bar .ui-effects-wrapper input {
+  height: 3.8rem !important;
+}
 .seeker {
   width: 3.8rem;
   height: 3.8rem;
@@ -315,6 +321,7 @@ button:focus {
 .seeker-text {
   display: none;
   height: 3.8rem;
+  width: 18rem !important;
   float: right;
   border: 1px solid #959595;
   color: #303030;
@@ -584,6 +591,9 @@ button:focus {
   right: 1.4rem;
   z-index: 2;
 }
+.right-arrow:hover {
+  background-color: #cdcdcd;
+}
 .left-arrow {
   position: absolute;
   width: 4.8rem;
@@ -593,6 +603,9 @@ button:focus {
   background-color: #e4e4e4;
   font-size: 2rem;
   z-index: 2;
+}
+.left-arrow:hover {
+  background-color: #cdcdcd;
 }
 .image {
   display: block;
@@ -630,6 +643,9 @@ button:focus {
 .clothes-show a i {
   padding-left: 0.5rem;
 }
+.show-more:hover span {
+  text-decoration: none;
+}
 .borderofimg {
   display: block;
   border: 2px solid #e5e5e5;
@@ -637,6 +653,9 @@ button:focus {
 }
 .borderofimg img {
   width: 100%;
+}
+.ware-link-name:hover p {
+  color: #888;
 }
 .costof {
   text-align: center;
@@ -1757,7 +1776,7 @@ p.padding-right-2.5 {
     width: 14rem;
   }
   .theme {
-    wdith: 95%;
+    width: 95%;
   }
   .company-name {
     width: 100%;
@@ -1769,10 +1788,6 @@ p.padding-right-2.5 {
   }
 }
 @media (max-width: 768px) {
-  .modal-dialog {
-    width: 50rem;
-    margin: 13rem auto 0;
-  }
   nav {
     float: right;
   }
@@ -1939,5 +1954,11 @@ p.padding-right-2.5 {
   .load-products,
   .sending {
     width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 52rem;
+    margin-top: 13rem;
   }
 }
