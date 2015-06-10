@@ -34,7 +34,7 @@
 						button.seeker(type="button")
 						input.seeker-text(type="text" placeholder="Search something")
 				a.bascket.visible-lg(href="#")
-					|<span>Bascket ()</span>
+					|<span>Bascket (0)</span>
 					img(src="img/pouch.png")
 				.bascket-dropdown
 					.cost-and-button
@@ -50,6 +50,9 @@
 				.modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledly="myModalLabel" aria-hidden="true")
 					.modal-dialog
 						.modal-content
+							.modal-header
+								button.close(type="button" data-dismiss="modal" aria-label="Close")
+									<span aria-hidden="true">&times;</span>
 							.modal-body
 								h1 SIGN IN
 								h5 E-MAIL
@@ -62,4 +65,4 @@
 								.log-in
 									a(href="account.html") LOG IN
 									a.havent-account(href="#") I don't have an account
-	//- hr.bottomofhead
+

@@ -76,9 +76,6 @@ button:focus {
   padding-right: 0;
 }
 /********		Nav Menu 	*************/
-.navbar-toggle {
-  background-color: #8d8d8d;
-}
 .navbar-collapse {
   padding: 1.1rem 0 0 0;
 }
@@ -162,6 +159,9 @@ button:focus {
   right: 6rem;
   bottom: 17.2rem;
   padding: 0.2rem 0.4rem 0.3rem;
+  border: 1px solid transparent;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 .eye-toggle:hover {
   border: 1px solid #c2c2c2;
@@ -276,6 +276,7 @@ button:focus {
   float: right;
   padding: 1.3rem 1rem 1rem;
   margin-right: 1.5rem;
+  border: 1px solid transparent;
 }
 .mobile-bascket:hover {
   border: 1px solid #e5e5e5;
@@ -1724,6 +1725,14 @@ p.padding-right-2.5 {
   .wear-name-history {
     width: 20rem;
   }
+  .big-rectangle {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .second-big-rectangle {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 @media (max-width: 992px) {
   .midle-screen-bascket {
@@ -1783,6 +1792,11 @@ p.padding-right-2.5 {
     float: left;
     width: 100%;
   }
+  .big-ractangle,
+  .second-big-rectangle {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
 }
 @media (max-width: 768px) {
   nav {
@@ -1791,8 +1805,15 @@ p.padding-right-2.5 {
   .container-fluid {
     padding-right: 0;
   }
-  .navbar-toggle {
+  button.collapsed {
     background-color: #8d8d8d;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: 1.1rem 1rem;
+    margin-right: 0;
+  }
+  .navbar-toggle {
+    background-color: #b8b8b8;
     -webkit-border-radius: 0;
     border-radius: 0;
     padding: 1.1rem 1rem;
