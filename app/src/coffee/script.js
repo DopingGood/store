@@ -22,10 +22,12 @@ $(document).ready(function(){
 				$(".seeker").addClass("hovered-seeker");
 				$(".seeker-text").show("slide", {direction: "right"}, 800);
 				$(".seeker-text").focus();
+				$(".bascket-dropdown").css("right", "24.7rem");
 		}
 		else {
 			$(".seeker").removeClass("hovered-seeker");
 			$(".seeker-text").hide("slide", {direction: "right"}, 500);
+			$(".bascket-dropdown").css("right", "6.7rem");
 		};
 	});
 	$('.selectpicker').selectpicker({
