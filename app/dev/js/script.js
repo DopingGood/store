@@ -79,10 +79,53 @@ $(document).ready(function(){
 		};
 	});
 	//Subtotal count
-	var Subtotal = 0;
-	$(".shopping-price").each(function(){
-		Subtotal += parseFloat($(this).text());
-		console.log(Subtotal);
+	var $Subtotal = 0;
+	// var $autoCounter = $(".shopping-price").each(function(){
+	// 	$Subtotal += parseFloat($(this).text());
+	// 	$(".shopping-subtotal").text($Subtotal.toFixed(2));
+	// });
+	function $autoCounter(){
+		var $quantityOfItems = parseFloat($(this).find('.amount-toggle p').text());
+		var $costOfItems = parseFloat($(this).find('.shopping-price').text()) * $quantityOfItems;
+		console.log($costOfItems);
+		$(this).find(".shopping-price").text($costOfItems.toString());
+		$Subtotal += $costOfItems;
+		$(".shopping-subtotal").text($Subtotal.toFixed(2));
+	};
+	$(".auto-count").each($autoCounter);
+	//quontity counter
+	$(".cart-plus, .cart-dash").click(function(){
+		var $counter = $(this).parent().siblings();
+		$Subtotal = 0;
+		if ($(this).hasClass("cart-plus") == true) {
+			$counter.text(parseFloat($counter.text()) + 1);
+			// $Subtotal = 0;
+			// $(".auto-count").each($autoCounter);
+			return false;
+		}
+		else {
+			if (parseFloat($counter.text()) > 1) {
+				$counter.text(parseFloat($counter.text()) - 1);
+				// $Subtotal = 0;
+				// $(".auto-count").each($autoCounter);
+				return false;
+			}
+			else {
+				return false;
+			};
+		};
+		$(".auto-count").each($autoCounter);
 	});
-	$(".shopping-subtotal").text(Subtotal.toFixed(2));
+	// $(".toggles a:last-child").click(function(){
+	// 	var $counter = $(this).parent().siblings();
+	// 	if (parseFloat($counter.text()) > 1) {
+	// 		$counter.text(parseFloat($counter.text()) - 1);
+	// 		$Subtotal = 0;
+	// 		$(".auto-count").each($autoCounter);
+	// 		return false;
+	// 	}
+	// 	else {
+	// 		return false;
+	// 	};
+	// });
 });
