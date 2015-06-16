@@ -248,10 +248,42 @@ button:focus {
   z-index: 1;
   -webkit-box-shadow: 0 0.4rem 0.5rem rgba(0,0,0,0.1);
   box-shadow: 0 0.4rem 0.5rem rgba(0,0,0,0.1);
+  padding: 1.8rem 1rem 2rem;
+}
+.bascket-purchase {
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.img-border {
+  float: left;
+  border: 1px solid #e5e5e5;
+}
+.img-border img {
+  float: left;
+  width: 5rem;
+  height: 5rem;
+}
+.bascket-ware-name {
+  float: left;
+  font-family: Lato-Bold;
+  color: #303030;
+  margin: 1.5rem 0 0 1.5rem;
+}
+.bascket-close {
+  float: right;
+  font-family: Lato-Light;
+  margin: 1.2rem 0 0 4rem;
+}
+.bascket-ware-price {
+  float: right;
+  color: #5b5b5b;
+  font-family: Lato-Regular;
+  margin: 1.5rem 0 0 1.5rem;
 }
 .cost-and-button {
   overflow: hidden;
-  padding: 1.8rem 1rem 2rem;
 }
 .cost-and-button p {
   float: left;
