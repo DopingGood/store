@@ -76,9 +76,6 @@ button:focus {
   padding-right: 0;
 }
 /********		Nav Menu 	*************/
-.navbar-toggle {
-  background-color: #8d8d8d;
-}
 .navbar-collapse {
   padding: 1.1rem 0 0 0;
 }
@@ -132,7 +129,7 @@ button:focus {
   padding: 1.7rem;
   border: 1px solid #fff;
   top: -11rem;
-  left: 20rem;
+  left: 21.5rem;
 }
 .modal-body {
   padding: 3rem 5rem;
@@ -162,6 +159,9 @@ button:focus {
   right: 6rem;
   bottom: 17.2rem;
   padding: 0.2rem 0.4rem 0.3rem;
+  border: 1px solid transparent;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 .eye-toggle:hover {
   border: 1px solid #c2c2c2;
@@ -248,10 +248,42 @@ button:focus {
   z-index: 1;
   -webkit-box-shadow: 0 0.4rem 0.5rem rgba(0,0,0,0.1);
   box-shadow: 0 0.4rem 0.5rem rgba(0,0,0,0.1);
+  padding: 1.8rem 1rem 2rem;
+}
+.bascket-purchase {
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.img-border {
+  float: left;
+  border: 1px solid #e5e5e5;
+}
+.img-border img {
+  float: left;
+  width: 5rem;
+  height: 5rem;
+}
+.bascket-ware-name {
+  float: left;
+  font-family: Lato-Bold;
+  color: #303030;
+  margin: 1.5rem 0 0 1.5rem;
+}
+.bascket-close {
+  float: right;
+  font-family: Lato-Light;
+  margin: 1.2rem 0 0 4rem;
+}
+.bascket-ware-price {
+  float: right;
+  color: #5b5b5b;
+  font-family: Lato-Regular;
+  margin: 1.5rem 0 0 1.5rem;
 }
 .cost-and-button {
   overflow: hidden;
-  padding: 1.8rem 1rem 2rem;
 }
 .cost-and-button p {
   float: left;
@@ -276,6 +308,7 @@ button:focus {
   float: right;
   padding: 1.3rem 1rem 1rem;
   margin-right: 1.5rem;
+  border: 1px solid transparent;
 }
 .mobile-bascket:hover {
   border: 1px solid #e5e5e5;
@@ -298,6 +331,9 @@ button:focus {
   padding: 1rem 1rem 0 0;
   float: right;
 }
+.seek-bar .ui-effects-wrapper input {
+  height: 3.8rem !important;
+}
 .seeker {
   width: 3.8rem;
   height: 3.8rem;
@@ -315,6 +351,7 @@ button:focus {
 .seeker-text {
   display: none;
   height: 3.8rem;
+  width: 18rem !important;
   float: right;
   border: 1px solid #959595;
   color: #303030;
@@ -584,6 +621,9 @@ button:focus {
   right: 1.4rem;
   z-index: 2;
 }
+.right-arrow:hover {
+  background-color: #cdcdcd;
+}
 .left-arrow {
   position: absolute;
   width: 4.8rem;
@@ -593,6 +633,9 @@ button:focus {
   background-color: #e4e4e4;
   font-size: 2rem;
   z-index: 2;
+}
+.left-arrow:hover {
+  background-color: #cdcdcd;
 }
 .image {
   display: block;
@@ -630,6 +673,14 @@ button:focus {
 .clothes-show a i {
   padding-left: 0.5rem;
 }
+.show-more:hover span {
+  text-decoration: none;
+}
+.categoryes-img {
+  width: 100%;
+  height: 26.3rem;
+  margin-bottom: 2.5rem;
+}
 .borderofimg {
   display: block;
   border: 2px solid #e5e5e5;
@@ -637,6 +688,13 @@ button:focus {
 }
 .borderofimg img {
   width: 100%;
+  height: 26.3rem;
+}
+.ware-link-name:hover p {
+  color: #888;
+}
+.ware-link-name img {
+  border: 2px solid #e5e5e5;
 }
 .costof {
   text-align: center;
@@ -826,6 +884,10 @@ button:focus {
   border-top-color: #606060;
   border-width: 6px 6px 0;
 }
+.bootstrap-select.open span.caret {
+  border-top: 0;
+  border-bottom: 0.6rem solid #606060;
+}
 .two-inputs {
   width: 100%;
   margin-bottom: 3.6rem;
@@ -978,6 +1040,11 @@ button:focus {
   color: #fff;
   background-color: #494949;
 }
+.pagination li a:active {
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+}
 .load-products {
   font-family: Lato-Bold;
   color: #fff;
@@ -1052,8 +1119,10 @@ button:focus {
 }
 .wares-img {
   float: left;
-  width: 10rem;
-  height: 10rem;
+  width: 9.3rem;
+  height: 9.3rem;
+  padding: 0.5rem 0;
+  margin-right: 1.5rem;
 }
 .ware-data {
   float: left;
@@ -1099,6 +1168,7 @@ button:focus {
   font-family: Lato-Regular;
   color: #303030;
   text-align: center;
+  overflow: auto;
 }
 .close-button {
   float: right;
@@ -1143,8 +1213,8 @@ button:focus {
   margin: 0.6rem 4.6rem 0 0;
 }
 .ware-color {
-  width: 16.5rem;
-  margin: 0.6rem 0.5rem 0 0;
+  width: 11rem;
+  margin: 0.6rem 3rem 0 0;
 }
 .cart-subtotal {
   overflow: hidden;
@@ -1708,6 +1778,14 @@ p.padding-right-2.5 {
   .wear-name-history {
     width: 20rem;
   }
+  .big-rectangle {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .second-big-rectangle {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 @media (max-width: 992px) {
   .midle-screen-bascket {
@@ -1757,7 +1835,7 @@ p.padding-right-2.5 {
     width: 14rem;
   }
   .theme {
-    wdith: 95%;
+    width: 95%;
   }
   .company-name {
     width: 100%;
@@ -1767,20 +1845,28 @@ p.padding-right-2.5 {
     float: left;
     width: 100%;
   }
+  .big-ractangle,
+  .second-big-rectangle {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
 }
 @media (max-width: 768px) {
-  .modal-dialog {
-    width: 50rem;
-    margin: 13rem auto 0;
-  }
   nav {
     float: right;
   }
   .container-fluid {
     padding-right: 0;
   }
-  .navbar-toggle {
+  button.collapsed {
     background-color: #8d8d8d;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: 1.1rem 1rem;
+    margin-right: 0;
+  }
+  .navbar-toggle {
+    background-color: #b8b8b8;
     -webkit-border-radius: 0;
     border-radius: 0;
     padding: 1.1rem 1rem;
@@ -1939,5 +2025,11 @@ p.padding-right-2.5 {
   .load-products,
   .sending {
     width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 52rem;
+    margin: 13rem auto;
   }
 }

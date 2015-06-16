@@ -17,11 +17,11 @@
 						.navbar-collapse.collapse#menu
 							ul.nav-menu.nav.navbar-nav
 								li
-									a(href="goods.html") Woman
+									a(href="women-goods.html") Woman
 								li
-									a(href="men.html") Men
+									a(href="men-goods.html") Men
 								li
-									a(href="#") Kids
+									a(href="kids-goods.html") Kids
 								li
 									a(href="account.html") Coming Soon
 								li.hidden-sm
@@ -34,9 +34,25 @@
 						button.seeker(type="button")
 						input.seeker-text(type="text" placeholder="Search something")
 				a.bascket.visible-lg(href="#")
-					|<span>Bascket ()</span>
+					|<span>Bascket (4)</span>
 					img(src="img/pouch.png")
 				.bascket-dropdown
+					.bascket-purchase
+						a.img-border(href="shopping-cart-cut")
+							img(src="")
+						p.bascket-ware-name FLORAL PLIMSOLL
+						a.bascket-close(href="#")
+							img(src="img/close.png")
+						p.bascket-ware-price
+							|<i class="fa fa-eur"></i>99,95
+					.bascket-purchase
+						a.img-border(href="shopping-cart-cut")
+							img(src="")
+						p.bascket-ware-name FLORAL PLIMSOLL
+						a.bascket-close(href="#")
+							img(src="img/close.png")
+						p.bascket-ware-price
+							|<i class="fa fa-eur"></i>99,95
 					.cost-and-button
 						p Subtotal: <span>0</span>
 						a(href="shopping-cart-cut.html") CHECK OUT
@@ -50,6 +66,9 @@
 				.modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledly="myModalLabel" aria-hidden="true")
 					.modal-dialog
 						.modal-content
+							.modal-header
+								button.close(type="button" data-dismiss="modal" aria-label="Close")
+									<span aria-hidden="true">&times;</span>
 							.modal-body
 								h1 SIGN IN
 								h5 E-MAIL
@@ -62,4 +81,4 @@
 								.log-in
 									a(href="account.html") LOG IN
 									a.havent-account(href="#") I don't have an account
-	//- hr.bottomofhead
+

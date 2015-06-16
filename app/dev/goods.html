@@ -29,8 +29,8 @@
                 <button type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 <div id="menu" class="navbar-collapse collapse">
                   <ul class="nav-menu nav navbar-nav">
-                    <li><a href="goods.html">Woman</a></li>
-                    <li><a href="men.html">Men</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="goods.html">Men</a></li>
                     <li><a href="#">Kids</a></li>
                     <li><a href="account.html">Coming Soon</a></li>
                     <li class="hidden-sm"><a href="about-us.html">About</a></li>
@@ -45,7 +45,7 @@
                 <button type="button" class="seeker"></button>
                 <input type="text" placeholder="Search something" class="seeker-text">
               </div>
-            </form><a href="#" class="bascket visible-lg"><span>Bascket ()</span><img src="img/pouch.png"></a>
+            </form><a href="#" class="bascket visible-lg"><span>Bascket (0)</span><img src="img/pouch.png"></a>
             <div class="bascket-dropdown">
               <div class="cost-and-button">
                 <p>Subtotal: <span>0</span></p><a href="shopping-cart-cut.html">CHECK OUT</a>
@@ -54,6 +54,9 @@
             <div id="myModal" tabindex="-1" role="dialog" aria-labelledly="myModalLabel" aria-hidden="true" class="modal fade">
               <div class="modal-dialog">
                 <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                  </div>
                   <div class="modal-body">
                     <h1>SIGN IN</h1>
                     <h5>E-MAIL</h5>
@@ -77,102 +80,88 @@
     </div>
     <div class="row margin-goods">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clothes-show">
-        <h1>COATS</h1><a href="#"> 
-          <p>
+        <h1>COATS</h1>
+        <p><a href="men.html" class="show-more">
+             
             <span>show more</span>
-            <i class="fa fa-caret-right"></i>
-          </p></a>
+            <i class="fa fa-caret-right"></i></a></p>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="detail.html" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"><span>89,95</span></i>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="no-products.html" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"><span>89,95</span></i>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="detail.html" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a><a href="detail.html" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"><span>89,95</span></i>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="no-products.html" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a><a href="no-products.html" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"><span>89,95</span></i>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONhiw2IRkqrVfEkMHY8jUJxCx-FMQlzrWyItCBC-BTheY6iLw"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
     </div>
     <div class="row margin-goods">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clothes-show">
-        <h1>OUTERWEARES</h1><a href="#"> 
-          <p>
+        <h1>OUTERWEARES</h1>
+        <p><a href="#" class="show-more">
             <span>show more</span>
-            <i class="fa fa-caret-right"></i>
-          </p></a>
+            <i class="fa fa-caret-right"></i></a></p>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLtc8WXT8q6J68oL2ssYczsuXbXrMwBSArT4tXMj8njoueGxJ"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
     </div>
     <div class="row margin-goods">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clothes-show">
-        <h1>T-SHORTS</h1><a href="#">
-          <p>
+        <h1>T-SHORTS</h1>
+        <p><a href="#" class="show-more">
             <span>show more</span>
-            <i class="fa fa-caret-right"></i>
-          </p></a>
+            <i class="fa fa-caret-right"></i></a></p>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a>
-        <p class="costof">
-          Double-Layered Top<br />
-          <i class="fa fa-eur"></i><span>89,95</span>
-        </p>
-      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 costof"><a href="#" class="borderofimg"><img src="http://i01.i.aliimg.com/wsphoto/v0/1152510435/Free-Shipping-2013-Men-brand-T-Shirts-man-printing-tshirts-fashion-Men-T-Shirts-round-neck.jpg"></a><a href="#" class="ware-link-name">
+          <p class="costof">
+            Double-Layered Top<br />
+            <i class="fa fa-eur"></i><span>89,95</span>
+          </p></a></div>
     </div>
     <div class="row carousel-margin hidden-xs hidden-sm">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 carousel-head">
