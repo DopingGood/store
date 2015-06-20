@@ -1786,6 +1786,10 @@ p.padding-right-2.5 {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  .twitter-block {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 @media (max-width: 992px) {
   .midle-screen-bascket {
@@ -1849,6 +1853,10 @@ p.padding-right-2.5 {
   .second-big-rectangle {
     padding-left: 9rem;
     padding-right: 9rem;
+  }
+  .twitter-block {
+    padding-left: 7rem;
+    padding-right: 7rem;
   }
 }
 @media (max-width: 768px) {
