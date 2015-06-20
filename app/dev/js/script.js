@@ -16,6 +16,10 @@ $(document).ready(function(){
 		$(".bascket").removeClass("bascket-hovered");
 		$(".bascket-dropdown").hide();
 	});
+
+	$(".bascket").click(function(){
+		return false;
+	});
 	// nav-bar seeker
 	$(".seeker").click(function(){
 		if ($(".seeker").hasClass("hovered-seeker") == false) {
