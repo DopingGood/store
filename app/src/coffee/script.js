@@ -91,21 +91,26 @@ $(document).ready(function(){
 			$(this).attr("data-origin-price", text);
 		})
 		//Subtotal count
-		var $subtotal;
-		$(".subtotal-price").each(function(){
+		var $subtotal = 0;
+		var $eachElement = function() {
+			$(".subtotal-price").each(function(){
 			var $elements = parseFloat($(this).text());
-			$subtotal += $elements.toFixed(2);
-			console.log($subtotal);
+			$subtotal += $elements;
 		});
+		};
+		$eachElement();
+		var $subtotalValue = function() {
+			$(".shopping-subtotal").text(($subtotal).toFixed(2));
+		};
+		$subtotalValue();
 		//Amount count
 		$(".cart-plus").click(function(e){
-			e.preventDefault();			
+			e.preventDefault();
 			var $item = $(this).parents(".auto-count"),
 				$counterEl = $item.find(".counter"),
 				$counter = parseInt($counterEl.text(), 10),
 				$priceEl = $item.find(".shopping-price"),
-				$price = parseFloat($priceEl.text()).toFixed(2),
-				$originPrice = parseFloat($priceEl.data("origin-price")).toFixed(2);
+				$originPrice = parseFloat($priceEl.data("origin-price"));
 
 			// увеличиваем счетчик
 			$counter++				
@@ -113,17 +118,18 @@ $(document).ready(function(){
 
 			// Увеличивем цену по формуле количество * цена
 			$priceEl.text(parseFloat($originPrice * $counter).toFixed(2));
-
+			//Вычисляем и записываем итог
+			$subtotal += $originPrice;
+			$subtotalValue();
 		});
 
-		$(".cart-dash").click(function(e){
+		$(".cart-minus").click(function(e){
 			e.preventDefault();
 			var $item = $(this).parents(".auto-count"),
 				$counterEl = $item.find(".counter"),
 				$counter = parseInt($counterEl.text(), 10),
 				$priceEl = $item.find(".shopping-price"),
-				$price = parseFloat($priceEl.text()).toFixed(2),
-				$originPrice = parseFloat($priceEl.data("origin-price")).toFixed(2);
+				$originPrice = parseFloat($priceEl.data("origin-price"));
 
 			// Не может быть меньше 1
 			if ($counter > 1)
@@ -132,15 +138,23 @@ $(document).ready(function(){
 				$counter--
 				$counterEl.text($counter);
 
-				// Уменьшаем цену по формуле количество * цена
-				$priceEl.text(parseFloat($price - $originPrice).toFixed(2));
+				// Уменьшаем цену по формуле количество - цена
+				$priceEl.text(parseFloat($originPrice * $counter).toFixed(2));
+
+				//Вычисляем и записываем итог
+				$subtotal -= $originPrice;
+				$subtotalValue();
 			}
 		});
 		// Close
-		$(".close-button").click(function(e)
-		{
+		$(".close-button").click(function(e) {
 			e.preventDefault();
-			$item = $(this).parents(".auto-count");
+			var	$item = $(this).parents(".auto-count"),
+				$priceEl = $item.find(".shopping-price"),
+				$price = parseFloat($priceEl.text());
+			//Итог после удаления
+			$subtotal -= $price;
+			$subtotalValue();
 			$item.remove();
 		})
 
