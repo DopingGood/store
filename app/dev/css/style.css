@@ -152,6 +152,9 @@ button:focus {
   font-family: Lato-Regular;
   padding-left: 1rem;
 }
+.modal-header {
+  border-bottom: none;
+}
 .eye-toggle {
   position: absolute;
   border: none;
@@ -1898,7 +1901,7 @@ p.padding-right-2.5 {
     opacity: 0.9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     filter: alpha(opacity=90);
-    width: 12rem;
+    width: 16rem;
     -webkit-box-shadow: 0 0 1.3rem rgba(0,0,0,0.3);
     box-shadow: 0 0 1.3rem rgba(0,0,0,0.3);
     padding-top: 0;
@@ -1913,10 +1916,22 @@ p.padding-right-2.5 {
   .nav-menu li a {
     padding: 1.5rem;
     font-size: 1.5rem;
+    overflow: hidden;
   }
   .nav-menu li a:hover {
     color: #303030;
     background-color: #f5f5f5;
+  }
+  .nav-menu li a img {
+    width: 4rem;
+    height: 3rem;
+    float: left;
+    margin-left: 1rem;
+    border: 1px solid #898989;
+  }
+  .nav-menu li a span {
+    float: left;
+    padding: 0.4rem 0 0 0.7rem;
   }
   .hazy-shades-margin {
     margin-bottom: 10rem;
