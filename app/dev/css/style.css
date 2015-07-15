@@ -152,6 +152,9 @@ button:focus {
   font-family: Lato-Regular;
   padding-left: 1rem;
 }
+.modal-header {
+  border-bottom: none;
+}
 .eye-toggle {
   position: absolute;
   border: none;
@@ -243,7 +246,7 @@ button:focus {
   width: 42.5rem;
   background-color: #fff;
   border: 1px solid #e5e5e5;
-  top: 4.3rem;
+  top: 4.2rem;
   right: 6.7rem;
   z-index: 1;
   -webkit-box-shadow: 0 0.4rem 0.5rem rgba(0,0,0,0.1);
@@ -607,7 +610,7 @@ button:focus {
   position: relative;
 }
 .img-slicker {
-  width: 93%;
+  width: 90%;
   margin: 0 auto;
 }
 .right-arrow {
@@ -645,6 +648,7 @@ button:focus {
 .image img {
   width: inherit;
   height: inherit;
+  border: 1px solid #b8b0b0;
 }
 .slick-prev:before,
 .slick-next:before {
@@ -1759,7 +1763,7 @@ p.padding-right-2.5 {
   -ms-transition: all 0s linear;
   transition: all 0s linear;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1099px) {
   .container-fluid {
     padding: 0;
   }
@@ -1791,7 +1795,7 @@ p.padding-right-2.5 {
     padding-right: 5rem;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .midle-screen-bascket {
     margin-right: 2.9rem;
   }
@@ -1859,7 +1863,7 @@ p.padding-right-2.5 {
     padding-right: 7rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   nav {
     float: right;
   }
@@ -1898,7 +1902,7 @@ p.padding-right-2.5 {
     opacity: 0.9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     filter: alpha(opacity=90);
-    width: 12rem;
+    width: 21rem;
     -webkit-box-shadow: 0 0 1.3rem rgba(0,0,0,0.3);
     box-shadow: 0 0 1.3rem rgba(0,0,0,0.3);
     padding-top: 0;
@@ -1911,12 +1915,24 @@ p.padding-right-2.5 {
     padding: 0;
   }
   .nav-menu li a {
-    padding: 1.5rem;
+    padding: 2rem;
     font-size: 1.5rem;
+    overflow: hidden;
   }
   .nav-menu li a:hover {
     color: #303030;
     background-color: #f5f5f5;
+  }
+  .nav-menu li a img {
+    width: 4rem;
+    height: 3rem;
+    float: left;
+    margin-left: 1rem;
+    border: 1px solid #898989;
+  }
+  .nav-menu li a span {
+    float: left;
+    padding: 0.4rem 0 0 0.7rem;
   }
   .hazy-shades-margin {
     margin-bottom: 10rem;

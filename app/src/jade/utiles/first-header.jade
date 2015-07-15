@@ -3,9 +3,6 @@
 		.row.header-border
 			.col-xs-2.col-sm-1.col-md-1.col-lg-1.left-padding-0
 				a.logotype(href="index.html") SH
-			//- .col-xs-9.col-sm-1.col-md-6.col-lg-6.right-padding.visible-xs
-			//- 	a.mobile-bascket(href="#")
-			//- 		img(src="img/bigger-pouch.png")
 			.col-xs-10.col-sm-6.col-md-5.col-lg-5.nav-col.right-padding
 				nav.nav.default-navbar
 					.container-fluid
@@ -17,15 +14,25 @@
 						.navbar-collapse.collapse#menu
 							ul.nav-menu.nav.navbar-nav
 								li
-									a(href="women-goods.html") Woman
+									a(href="women-goods.html")
+										img.visible-xs(src="http://lorempixel.com/400/200/")
+										<span>Woman</sapn>
 								li
-									a(href="men-goods.html") Men
+									a(href="men-goods.html")
+										img.visible-xs(src="http://lorempixel.com/400/200/")
+										<span>Men</span>
 								li
-									a(href="kids-goods.html") Kids
+									a(href="kids-goods.html")
+										img.visible-xs(src="http://lorempixel.com/400/200/")
+										<span>Kids</span>
 								li
-									a(href="account.html") Coming Soon
+									a(href="#")
+										img.visible-xs(src="http://lorempixel.com/400/200/")
+										<span>Coming Soon</span>
 								li.hidden-sm
-									a(href="about-us.html") About
+									a(href="about-us.html")
+										img.visible-xs(src="http://lorempixel.com/400/200/")
+										<span>About</span>
 				a.mobile-bascket.visible-xs(href="shopping-cart-cut.html")
 					img(src="img/bigger-pouch.png")
 			.col-xs-8.col-sm-5.col-md-6.col-lg-6.right-padding-0.hidden-xs
@@ -36,27 +43,29 @@
 				a.bascket.visible-lg(href="#")
 					|<span>Bascket (4)</span>
 					img(src="img/pouch.png")
-				.bascket-dropdown
-					.bascket-purchase
-						a.img-border(href="shopping-cart-cut")
-							img(src="")
-						p.bascket-ware-name FLORAL PLIMSOLL
-						a.bascket-close(href="#")
-							img(src="img/close.png")
-						p.bascket-ware-price
-							|<i class="fa fa-eur"></i>99,95
-					.bascket-purchase
-						a.img-border(href="shopping-cart-cut")
-							img(src="")
-						p.bascket-ware-name FLORAL PLIMSOLL
-						a.bascket-close(href="#")
-							img(src="img/close.png")
-						p.bascket-ware-price
-							|<i class="fa fa-eur"></i>99,95
-					.cost-and-button
-						p Subtotal: <span>0</span>
-						a(href="shopping-cart-cut.html") CHECK OUT
-				a.midle-screen-bascket.hidden-lg(href="shopping-cart-cut.html") Bascket (4)
+				form
+					.bascket-dropdown
+						.bascket-purchase
+							a.img-border(href="shopping-cart-cut")
+								img(src="")
+							p.bascket-ware-name FLORAL PLIMSOLL
+							a.bascket-close(href="#")
+								img(src="img/close.png")
+							p.bascket-ware-price
+								|<i class="fa fa-eur"></i>99,95
+						.bascket-purchase
+							a.img-border(href="shopping-cart-cut")
+								img(src="")
+							p.bascket-ware-name FLORAL PLIMSOLL
+							a.bascket-close(href="#")
+								img(src="img/close.png")
+							p.bascket-ware-price
+								|<i class="fa fa-eur"></i>99,95
+						.cost-and-button
+							p Subtotal: <i class="fa fa-eur"></i>432,50
+							a(href="shopping-cart-cut.html") CHECK OUT
+				form
+					a.midle-screen-bascket.hidden-lg(href="shopping-cart-cut.html") Bascket (4)
 				img.bascket-img.hidden-lg(src="img/pouch.png")
 				//- a.nav-a.nav-a-margin.btn.btn-primary.btn-lg(href="#" data-toggle="modal" data-target="#myModal")
 				//- 	|Log In
