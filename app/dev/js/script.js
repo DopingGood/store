@@ -17,23 +17,61 @@ $(document).ready(function(){
 		$(".bascket-dropdown").hide();
 	});
 
-	$(".bascket").click(function(){
-		return false;
+	$(".bascket").click(function(e){
+		e.preventDefault();
 	});
 	// nav-bar seeker
 	$(".seeker").click(function(){
-		if ($(".seeker").hasClass("hovered-seeker") == false) {
-				$(".seeker").addClass("hovered-seeker");
-				$(".seeker-text").show("slide", {direction: "right"}, 800);
-				$(".seeker-text").focus();
-				$(".bascket-dropdown").css("right", "24.7rem");
-		}
-		else {
-			$(".seeker").removeClass("hovered-seeker");
-			$(".seeker-text").hide("slide", {direction: "right"}, 500);
-			$(".bascket-dropdown").css("right", "6.7rem");
+		var $s = $(".seeker"),
+			$st = $(".seeker-text");
+		if ($s.hasClass("hovered-seeker") == false) {
+			// Открытие поисковая панели
+			$s.addClass("hovered-seeker");
+			$st.show("slide", {direction: "right"}, 800);
+			$(".bascket-dropdown").css("right", "24.7rem");
+			$s.attr({type:"submit"});
+			$st.focus();
+			// Закрытие при щелчке вне поисковой панели
+			$(document).bind("click.event", function(e){
+				var $clickTarget = $(e.target).attr("class");
+				if ($clickTarget != "seeker-text" && $clickTarget != "seeker") {
+					$st.hide("slide", {direction: "right"}, 500);
+					$s.removeClass("hovered-seeker");
+					$(".bascket-dropdown").css("right", "6.7rem");
+					$s.attr({type:"button"});
+					$(document).unbind("click.event");
+				}
+			});
 		};
-	});
+		return false;
+		});
+	$("")
+	// $(document).click(function(e){
+	// 	if ($(e.target).closest("seek-bar").length == 0 {
+	// 	// $(document).click(function(){
+	// 	// 	if ($(this).hasClass("seeker") == true) {
+	// 	// 		console.log("button");
+	// 	// 	}
+	// 	// 	else if ($(this).hasClass("seeker-text") == true) {
+	// 	// 		console.log("input");
+	// 	// 	}
+	// 	// 	else {
+	// 	// 		$(".seeker").removeClass("hovered-seeker");
+	// 	// 		$(".seeker-text").hide("slide", {direction: "right"}, 500);
+	// 	// 		$(".bascket-dropdown").css("right", "6.7rem");
+	// 	// 	};
+
+	// 		$(".seeker").removeClass("hovered-seeker");
+	// 		$(".seeker-text").hide("slide", {direction: "right"}, 500);
+	// 		$(".bascket-dropdown").css("right", "6.7rem");
+	// 	};
+	// });
+	// $(".seek-bar input").blur(function(){
+	// 	$(".seeker").removeClass("hovered-seeker");
+	// 	$(".seeker-text").hide("slide", {direction: "right"}, 500);
+	// 	$(".bascket-dropdown").css("right", "6.7rem");
+	// });
+	// Filters
 	$('.selectpicker').selectpicker({
 		dropupAuto: false,
 		size: 3
