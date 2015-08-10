@@ -1762,7 +1762,7 @@ p.padding-right-2.5 {
   -ms-transition: all 0s linear;
   transition: all 0s linear;
 }
-@media (max-width: 1099px) {
+@media (max-width: 1199px) {
   .container-fluid {
     padding: 0;
   }
