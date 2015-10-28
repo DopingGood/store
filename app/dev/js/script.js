@@ -45,32 +45,6 @@ $(document).ready(function(){
 		};
 		return false;
 		});
-	$("")
-	// $(document).click(function(e){
-	// 	if ($(e.target).closest("seek-bar").length == 0 {
-	// 	// $(document).click(function(){
-	// 	// 	if ($(this).hasClass("seeker") == true) {
-	// 	// 		console.log("button");
-	// 	// 	}
-	// 	// 	else if ($(this).hasClass("seeker-text") == true) {
-	// 	// 		console.log("input");
-	// 	// 	}
-	// 	// 	else {
-	// 	// 		$(".seeker").removeClass("hovered-seeker");
-	// 	// 		$(".seeker-text").hide("slide", {direction: "right"}, 500);
-	// 	// 		$(".bascket-dropdown").css("right", "6.7rem");
-	// 	// 	};
-
-	// 		$(".seeker").removeClass("hovered-seeker");
-	// 		$(".seeker-text").hide("slide", {direction: "right"}, 500);
-	// 		$(".bascket-dropdown").css("right", "6.7rem");
-	// 	};
-	// });
-	// $(".seek-bar input").blur(function(){
-	// 	$(".seeker").removeClass("hovered-seeker");
-	// 	$(".seeker-text").hide("slide", {direction: "right"}, 500);
-	// 	$(".bascket-dropdown").css("right", "6.7rem");
-	// });
 	// Filters
 	$('.selectpicker').selectpicker({
 		dropupAuto: false,
