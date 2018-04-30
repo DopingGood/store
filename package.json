@@ -25,6 +25,8 @@
     "@angular/core": "^5.2.9",
     "@angular/http": "^5.2.9",
     "@angular/router": "^5.2.9",
+    "@nguniversal/express-engine": "^5.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "^5.0.0",
     "@types/slick-carousel": "^1.6.32",
     "awesome-typescript-loader": "^4.0.1",
     "core-js": "^2.5.4",

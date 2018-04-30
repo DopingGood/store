@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "skipMetadataEmit": true,
+    "entryModule": "app/Components/app.server.module#AppServerModule"
+  }
+}

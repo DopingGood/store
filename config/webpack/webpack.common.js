@@ -1,15 +1,14 @@
-const path = require('path');
-
-const webpack = require('webpack');
-const helpers = require('./config/webpack/helpers');
+const { root } = require('./helpers.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtPlugin = require('script-ext-html-webpack-plugin');
 const HotModuleReplacementPlugin = require('webpack-hot-middleware');
 
-
 module.exports = {
 	mode: 'development',
-	entry: 'src/scripts/app/Components/app.module.ts',
+	entry: {
+		'polyfills': root('./src/polyfills.js'),
+		'app': root('./src/app/Components/app.module.ts')
+	},
 	module: {
 		rules: [
 			// Scripts loaders
@@ -29,7 +28,7 @@ module.exports = {
 
 			// Styles loaders
 			{
-				test: /\.styl&/,
+				test: /\.styl$/,
 				use: {
 					loader: 'style-loader!css-loader!stylus-loader'
 				}

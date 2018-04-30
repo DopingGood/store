@@ -8,5 +8,9 @@
 		"experimentalDecorators": false,
 		"lib": [ "es2015", "dom" ],
 		"noImplicitAny": true
-	}
+	},
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
 }
