@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IndexPageComponent } from './IndexPage/index-page.component.ts';
+import { IndexPageComponent } from './indexPage/index-page.component';
 
 const routes: Routes = [
-	{path: '', component: 'IndexPageComponent'}
+	{path: '', component: IndexPageComponent}
 ]
 
 @NgModule({

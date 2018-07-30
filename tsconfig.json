@@ -5,7 +5,7 @@
 		"moduleResolution": "node",
 		"sourceMap": false,
 		"emitDecoratorMetadata": false,
-		"experimentalDecorators": false,
+		"experimentalDecorators": true,
 		"lib": [ "es2015", "dom" ],
 		"noImplicitAny": true
 	},

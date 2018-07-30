@@ -1,9 +1,9 @@
-var path = require('path');
+const { resolve } = require('path');
 
-function root(path) {
+function rootPath(path) {
 	return resolve(__dirname, '../../', path);
 }
 
 module.exports = {
-	root: root
+	rootPath: rootPath
 }

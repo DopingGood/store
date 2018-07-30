@@ -1,4 +1,5 @@
-const { root } = require('./helpers.js');
+const webpack = require('webpack');
+const { rootPath } = require('./helpers');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtPlugin = require('script-ext-html-webpack-plugin');
 const HotModuleReplacementPlugin = require('webpack-hot-middleware');
@@ -6,8 +7,19 @@ const HotModuleReplacementPlugin = require('webpack-hot-middleware');
 module.exports = {
 	mode: 'development',
 	entry: {
-		'polyfills': root('./src/polyfills.js'),
-		'app': root('./src/app/Components/app.module.ts')
+		'polyfills': rootPath('./src/polyfills.js'),
+		'app': rootPath('./src/app/Components/app.module.ts')
+	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				common: {
+					name: 'common',
+					chunks: 'initial',
+					minSize: 2
+				}
+			}
+		}
 	},
 	module: {
 		rules: [
@@ -39,11 +51,17 @@ module.exports = {
 		extensions: ['.ts', '.js', '.styl', '.css', '.html']
 	},
 	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		filename: 'bundle.[name].js',
+		path: rootPath('dist'),
 		publicPath: '/'
 	},
 	plugins: [
+		new webpack.ContextReplacementPlugin(
+        	// The (\\|\/) piece accounts for path separators in *nix and Windows
+        	/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+        	root('./src'), // location of your src
+        	{} // a map of your routes 
+      	),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html',
 			inject: 'head'
