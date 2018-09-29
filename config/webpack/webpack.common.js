@@ -27,7 +27,7 @@ module.exports = {
 			{
 				test: /\.ts$/,
 				use: {
-					loader: 'awesome-typescript-loader'
+					loader: 'ts-loader'
 				}
 			},
 			// Templates loaders
@@ -59,11 +59,12 @@ module.exports = {
 		new webpack.ContextReplacementPlugin(
         	// The (\\|\/) piece accounts for path separators in *nix and Windows
         	/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-        	root('./src'), // location of your src
+        	rootPath('./src'), // location of your src
         	{} // a map of your routes 
       	),
 		new HtmlWebpackPlugin({
-			template: 'src/index.html',
+			template: rootPath('src/index.html'),
+			output: rootPath('dist'),
 			inject: 'head'
 		}),
 		new ScriptExtPlugin({

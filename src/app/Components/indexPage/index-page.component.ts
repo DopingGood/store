@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class IndexPageComponent implements OnInit {
+	message: string = 'IndexPageComponent initialized';
 	
-	constructor() {}
+	constructor() {
+	}
 
-	ngOnInit() {}
+	ngOnInit() {
+		console.log(this.message);
+	}
 }

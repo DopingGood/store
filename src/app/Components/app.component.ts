@@ -1,10 +1,17 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
 	encapsulation: ViewEncapsulation.Emulated,
 	selector: 'app',
-	templateUrl: 'views/app.component.html'
+	templateUrl: './app.component.html'
 })
 export class AppComponent {
-	
+	message: string = 'AppComponent initialized';
+
+	constructor() {
+	}
+
+	ngOnInit() {
+		console.log(this.message);
+	}
 }
