@@ -26,10 +26,11 @@ module.exports = {
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
-				common: {
-					name: 'common',
+				commons: {
+					reuseExistingChunk: true,
+					name: 'commons',
 					chunks: 'initial',
-					minSize: 2
+					minChunks: 2
 				}
 			}
 		}
@@ -65,19 +66,24 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.[name].js',
-		path: helpers.path('dist'),
+		path: helpers.rootPath('dist'),
 		publicPath: '/'
 	},
 	plugins: [
+		// new webpack.ContextReplacementPlugin(
+		// 	// The (\\|\/) piece accounts for path separators in *nix and Windows
+		// 	/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+		// 	'./src' // location of your src
+		// 	// {} // a map of your routes 
+		// ),
 		new webpack.ContextReplacementPlugin(
-        	// The (\\|\/) piece accounts for path separators in *nix and Windows
-        	/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-        	'./src', // location of your src
-        	{} // a map of your routes 
-      	),
+    		/(.+)?angular(\\|\/)core(.+)?/,
+    		helpers.rootPath('./src'),
+    		{}
+		),
 		new HtmlWebpackPlugin({
-			template: './src/index.html',
-			output: './dist',
+			template: helpers.rootPath('./src/index.html'),
+			output: helpers.rootPath('dist'),
 			inject: 'head'
 		}),
 		new ScriptExtPlugin({

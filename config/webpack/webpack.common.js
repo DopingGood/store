@@ -7,20 +7,20 @@ const HotModuleReplacementPlugin = require('webpack-hot-middleware');
 module.exports = {
 	mode: 'development',
 	entry: {
-		'polyfills': rootPath('./src/polyfills.js'),
+		// 'polyfills': rootPath('./src/polyfills.js'),
 		'app': rootPath('./src/app/Components/app.module.ts')
 	},
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				common: {
-					name: 'common',
-					chunks: 'initial',
-					minSize: 2
-				}
-			}
-		}
-	},
+	// optimization: {
+	// 	splitChunks: {
+	// 		cacheGroups: {
+	// 			common: {
+	// 				name: 'common',
+	// 				chunks: 'initial',
+	// 				minSize: 2
+	// 			}
+	// 		}
+	// 	}
+	// },
 	module: {
 		rules: [
 			// Scripts loaders

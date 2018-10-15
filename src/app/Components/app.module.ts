@@ -8,13 +8,14 @@ import { StoreHeaderComponent } from './header/store-header.component';
 import { StoreFooterComponent } from './footer/store-footer.component';
 import { IndexPageComponent } from './indexPage/index-page.component';
 
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'store' }),
 		FormsModule,
-		AppRoutingModule
+		CommonModule
+		// AppRoutingModule
 	],
 	declarations: [
 		AppComponent,
