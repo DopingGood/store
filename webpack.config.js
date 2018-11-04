@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 // const { rootPath } = require('./helpers');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtPlugin = require('script-ext-html-webpack-plugin');
@@ -66,7 +67,9 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.[name].js',
-		path: helpers.rootPath('dist'),
+		// path: helpers.rootPath('./dist'),
+		path: path.resolve(__dirname, 'dist'),
+		// path: __dirname + '/dist',
 		publicPath: '/'
 	},
 	plugins: [
@@ -77,12 +80,12 @@ module.exports = {
 		// 	// {} // a map of your routes 
 		// ),
 		new webpack.ContextReplacementPlugin(
-    		/(.+)?angular(\\|\/)core(.+)?/,
-    		helpers.rootPath('./src'),
+			/(.+)?angular(\\|\/)core(.+)?/,
+			helpers.rootPath('./src'),
     		{}
 		),
 		new HtmlWebpackPlugin({
-			template: helpers.rootPath('./src/index.html'),
+			template: helpers.rootPath('src/index.html'),
 			output: helpers.rootPath('dist'),
 			inject: 'head'
 		}),
